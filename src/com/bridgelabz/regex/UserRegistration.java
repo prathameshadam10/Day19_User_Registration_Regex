@@ -13,5 +13,12 @@ public class UserRegistration {
             System.out.println("valid");
         else
             System.out.println("Invalid");
+//        UC2 Last Name
+        Pattern pattern2 = Pattern.compile("^[A-Z][a-z]{2,}");
+        Matcher matcher2 = pattern2.matcher("Adam");
+        if (matcher2.matches())
+            System.out.println("valid");
+        else
+            System.out.println("Invalid");
     }
 }
