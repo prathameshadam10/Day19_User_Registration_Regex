@@ -39,9 +39,18 @@ public class UserRegistration {
         Pattern pattern5 = Pattern.compile("^[A-za-z]{8,}$");
         Matcher matcher5 = pattern5.matcher("setMyPassword");
         if (matcher5.matches())
-            System.out.println("valid Password");
+            System.out.println("valid Password Rule1");
         else
-            System.out.println("Invalid Password");
+            System.out.println("Invalid Password Rule1");
+//        UC6
+//        Rule2: minimum 8 characters with atleast one upper case letter
+        Pattern pattern6 = Pattern.compile("^(?=.*[a-z]*[A-Z]).{8,}$");
+        Matcher matcher6 = pattern6.matcher("Mypassword");
+        if (matcher6.matches())
+            System.out.println("valid Password Rule2");
+        else
+            System.out.println("Invalid Password Rule2");
     }
 }
+
 
