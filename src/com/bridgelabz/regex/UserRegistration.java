@@ -27,5 +27,12 @@ public class UserRegistration {
             System.out.println("valid email");
         else
             System.out.println("Invalid email");
+//        UC4 Phone Number
+        Pattern pattern4 = Pattern.compile("^(\\+?\\d{1,3})\\s\\d{10}$");
+        Matcher matcher4 = pattern4.matcher("+91 8983930906");
+        if (matcher4.matches())
+            System.out.println("valid Phone Number");
+        else
+            System.out.println("Invalid Phone Number");
     }
 }
