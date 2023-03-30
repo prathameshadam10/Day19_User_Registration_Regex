@@ -34,5 +34,14 @@ public class UserRegistration {
             System.out.println("valid Phone Number");
         else
             System.out.println("Invalid Phone Number");
+//        UC5
+//        Rule1: minimum 8 characters
+        Pattern pattern5 = Pattern.compile("^[A-za-z]{8,}$");
+        Matcher matcher5 = pattern5.matcher("setMyPassword");
+        if (matcher5.matches())
+            System.out.println("valid Password");
+        else
+            System.out.println("Invalid Password");
     }
 }
+
