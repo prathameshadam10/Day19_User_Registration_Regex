@@ -67,8 +67,39 @@ public class UserRegistration {
             System.out.println("valid Password Rule4");
         else
             System.out.println("Invalid Password Rule4");
+        //uc9
+        //  1. abc@yahoo.com,
+        //• 2. abc-100@yahoo.com,
+        //• 3. abc.100@yahoo.com
+        //• 2. abc111@abc.com,
+        //• 4. abc-100@abc.net,
+        //• 5. abc.100@abc.com.au
+        //• 6. abc@1.com,
+        //• 7. abc@gmail.com.com
+        //• 8. abc+100@gmail.com
+        String text = "Here are some sample email addresses:"+
+                "        //  1. abc@yahoo.com,\n" +
+                "        //• 2. abc-100@yahoo.com,\n" +
+                "        //• 3. abc.100@yahoo.com\n" +
+                "        //• 4. abc111@abc.com,\n" +
+                "        //• 5. abc-100@abc.net,\n" +
+                "        //• 6. abc.100@abc.com.au\n" +
+                "        //• 7. abc@1.com,\n" +
+                "        //• 8. abc@gmail.com.com\n" +
+                "        //• 9. abc+100@gmail.com";
+//        Regular Expression to match email address
+        String emailPatterns = "[A-Za-z0-9.+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
+//        Create a Pattern object from the regular expression
+        Pattern pattern9 = Pattern.compile(emailPatterns);
+//        Use a Matcher object to find all occurrences of the pattern in the text
+        Matcher matcher9 = pattern9.matcher(text);
+//        Iterate over the matches and print each email address
+        System.out.println("Valid email are.....");
+        while (matcher9.find()){
+            String email = matcher9.group();
+            System.out.println(email);
+        }
     }
 }
-
 
 
