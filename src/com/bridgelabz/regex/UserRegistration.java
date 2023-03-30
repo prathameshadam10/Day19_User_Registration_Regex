@@ -58,7 +58,17 @@ public class UserRegistration {
             System.out.println("valid Password Rule3");
         else
             System.out.println("Invalid Password Rule3");
+//        UC8
+//        Rule3: minimum 8 characters with atleast one upper case letter with atlest one numerical number
+//        and one special character
+        Pattern pattern8 = Pattern.compile("^(?=.*[a-z]*[A-Z])(?=.*[0-9])(?=.*[\\W_]).{8,}$");
+        Matcher matcher8 = pattern8.matcher("MyPassword@1");
+        if (matcher8.matches())
+            System.out.println("valid Password Rule4");
+        else
+            System.out.println("Invalid Password Rule4");
     }
 }
+
 
 
